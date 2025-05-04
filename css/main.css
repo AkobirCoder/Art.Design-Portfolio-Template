@@ -1,0 +1,408 @@
+/* Root styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Playfair: "Playfair", serif;
+    --Quicksand: "Quicksand", sans-serif;
+    --Roboto: "Roboto", sans-serif;
+    --dark: #3c393d;
+    --shadow: #6f6f6f;
+    --extraDark: #2b2b2b;
+}
+
+/* Header section styles */
+.headerSection .banner {
+    padding-top: 10%;
+}
+
+.banner .bannerForm form {
+    width: 95%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    margin-top: 0.8rem;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    transition: 0.5s ease;
+    justify-content: space-between;
+}
+
+.banner .bannerForm form:hover {
+    box-shadow: 0px 5px 10px 5px var(--shadow);
+}
+
+.bannerForm form .formInputSearch {
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    font-family: var(--Roboto);
+    padding: 0.6rem 0rem 0.6rem 0.6rem;
+}
+
+.bannerForm form .formInputSearch::placeholder {
+    text-transform: capitalize;
+}
+
+.bannerForm form .formInputSearch[type="search"]::-webkit-search-cancel-button {
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.bannerForm form .formBtnSearch {
+    width: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.bannerForm form .formBtnSearch i {
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+/* Design section styles */
+.designSection {
+    padding: 4.5rem 0rem;
+}
+
+.designSection .designSectionContent .designSectionCards {
+    gap: 2rem;
+    display: grid;
+    margin: 2rem 0rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.designSectionContent .designSectionCards .designSectionCard {
+    margin: 0rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+}
+
+.designSectionCards .designSectionCard .designSectionCardImage {
+    overflow: hidden;
+    position: relative;
+}
+
+.designSectionCardImage::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.designSectionCardImage img {
+    transition: all 0.5s ease;
+}
+
+.designSectionCard:hover .designSectionCardImage img {
+    transform: scale(1.2);
+}
+
+.designSectionCardImage span:first-of-type {
+    z-index: 1;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #fff;
+    content: " ";
+    position: absolute;
+    padding: 0.25rem 1rem;
+    background: var(--dark);
+}
+
+.designSectionCardImage span:last-of-type {
+    z-index: 1;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: absolute;
+    text-transform: capitalize;
+}
+
+.designSectionCard .designSectionCardInfo {
+    width: 85%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.designSectionCard .designSectionCardInfo a {
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+
+.designSectionCardInfo a.darkMode {
+    color: #fff;
+}
+
+/* Blog section styles */
+.blogSection {
+    padding: 4.5rem 0rem;
+    background: #f9f9f9;
+}
+
+.blogSection .blogSectionContent .blogSectionCards {
+    gap: 2rem;
+    display: grid;
+    margin: 2rem 0rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blogSectionCards .blogSectionCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+
+.blogSectionCard:hover {
+    box-shadow: 0px 0px 20px 5px #d3d3d3;
+}
+
+.blogSectionCards .blogSectionCard .blogSectionCardImage {
+    position: relative;
+}
+
+.blogSectionCardImage span:first-of-type {
+    z-index: 1;
+    color: #fff;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    position: absolute;
+    padding: 0.3rem 0.6rem;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.blogSectionCard .blogSectionCardInfo {
+    padding: 0rem 2.2rem;
+    margin: 2.2rem 0rem;
+}
+
+.blogSectionCard .blogSectionCardInfo span {
+    display: block;
+    font-weight: lighter;
+    padding-bottom: 0.5rem;
+}
+
+.blogSectionCardInfo .blogCardTitle {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 0.6rem 0rem;
+    font-family: var(--Playfair);
+}
+
+.blogSectionCardInfo .blogCardInfo {
+    opacity: 0.9;
+    font-weight: 300;
+    font-size: 1.1rem;
+    padding-bottom: 1.8rem;
+}
+
+.blogSectionCardInfo .blogCardBtn {
+    color: #fff;
+    font-size: 1.1rem;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    background: var(--dark);
+    transition: all 0.3s ease;
+    font-family: var(--Roboto);
+}
+
+.blogSectionCardInfo .blogCardBtn:hover {
+    background: var(--extraDark);
+    box-shadow: 5px 5px 5px #6f6f6f;
+}
+
+/* About section styles */
+.aboutSection {
+    padding: 4.5rem 0rem;
+}
+
+.aboutSection .aboutSectionContent {
+    margin: 2rem 0rem;
+}
+
+.aboutSection .aboutSectionContent .aboutSectionContentItems {
+    display: grid;
+    column-gap: 4rem;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.aboutSectionContentItems .aboutSectionInfo .aboutTitle {
+    margin: 2rem 0rem;
+}
+
+.aboutSectionInfo .aboutTitle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aboutSectionInfo .aboutTitle .authorName {
+    font-size: 2.5rem;
+    color: var(--extraDark);
+    font-family: var(--Playfair);
+}
+
+.aboutSectionInfo .aboutTitle .authorProf {
+    opacity: 0.5;
+    font-size: 1.5rem;
+    color: var(--dark);
+    text-transform: capitalize;
+}
+
+.aboutSectionInfo .aboutTitle .authorProf a {
+    text-decoration: none;
+    color: var(--extraDark);
+}
+
+.aboutTitle .authorProf a:hover {
+    text-decoration: underline;
+}
+
+.aboutSectionInfo .aboutAuthor {
+    opacity: 0.8;
+    font-size: 1.2rem;
+    text-indent: 2rem;
+    text-align: justify;
+    padding: 0.6rem 0rem;
+}
+
+/* Reviews section styles */
+.reviewsSection {
+    overflow-x: hidden;
+    padding: 4.5rem 0rem;
+}
+
+.reviewsSection .reviewsTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+} 
+
+.reviewsSection .reviewsTrack .reviewsSectionContent {
+    overflow: hidden;
+    margin: 2rem 0rem;
+    position: relative;
+}
+
+.reviewsSectionContent .reviewsSectionContentItems {
+    display: flex;
+    padding: 2rem;
+    flex: 0 0 100%;
+    justify-content: center;
+}
+
+.reviewsSectionContentItems .reviewContentImage {
+    width: 35%;
+    display: flex;
+    margin-right: 3rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reviewContentImage .reviewImageTitle {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-family: var(--Playfair);
+}
+
+.reviewContentImage .reviewImageProf {
+    font-size: 1.2rem;
+    color: var(--dark);
+    text-align: center;
+}
+
+.reviewContentImage .reviewImageProf .reviewProfInfo p {
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-family: var(--Quicksand);
+}
+
+.reviewContentImage .reviewImageProf .reviewProfInfo a {
+    color: var(--dark);
+    text-decoration: none;
+} 
+
+.reviewContentImage .reviewImageProf .reviewProfInfo a:hover {
+    text-decoration: underline;
+}
+
+.reviewContentImage .reviewImageProf .reviewProfLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewContentImage .reviewImageProf .reviewProfLogo a {
+    margin: 0rem 1rem;
+}
+
+.reviewContentImage .reviewImageProf .reviewProfLogo img {
+    width: 70px;
+}
+
+.reviewsSectionContentItems .reviewContentImage img {
+    width: 300px;
+}
+
+.reviewsSectionContentItems .reviewContentInfo {
+    width: 40%;
+}
+
+.reviewContentInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.reviewContentInfo .reviewText {
+    opacity: 0.8;
+    font-size: 1rem;
+    margin: 2rem 0rem;
+    text-indent: 2rem;
+    text-align: justify;
+    line-height: 1.8rem;
+}
+
+.reviewContentInfo .reviewValuation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviewContentInfo .reviewValuation i {
+    opacity: 0.5;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.reviewContentInfo .reviewValuation i.active {
+    color: #fffb00;
+}
+
+.reviewContentInfo .reviewValuation span {
+    font-size: 1.3rem;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    font-family: var(--Playfair);
+}

@@ -1,0 +1,669 @@
+/* Root styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Playfair: "Playfair", serif;
+    --Quicksand: "Quicksand", sans-serif;
+    --Roboto: "Roboto", sans-serif;
+    --dark: #3c393d;
+    --shadow: #6f6f6f;
+    --extraDark: #2b2b2b;
+}
+
+/* Global styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--Quicksand);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.4;
+    color: var(--dark);
+    transition: all 0.4s ease;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 0rem 1.2rem;
+}
+
+.sectionInfo {
+    display: flex;
+    padding: 1rem 0rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sectionInfo .sectionTitle {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+
+.sectionInfo .sectionSubtitle {
+    padding: 0.6rem 0rem;
+    text-transform: uppercase;
+}
+
+/* Header section styles */
+.headerSection {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("../images/banner-bg.jpg")
+                center/cover
+                no-repeat
+                fixed;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 1.2rem;
+    position: sticky;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navigationMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigationMenu .navigationMenuLogo a {
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    position: relative;
+    padding: 0rem 1rem;
+    margin: 0rem 0.2rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: var(--Playfair);
+}
+
+.navigationMenu .navigationMenuLogo a i {
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    position: absolute;
+} 
+
+.navigationMenu .navigationMenuNavbar {
+    padding: 0.8rem 0rem;
+}
+
+.navigationMenu .navigationMenuNavbar .navbarItems {
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+    align-items: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+}
+
+.navigationMenuNavbar .navbarItems .navbarItem a {
+    color: #fff;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.5s ease;
+}
+
+.navbarItems .navbarItem a:hover {
+    opacity: 0.7;
+}
+
+.headerSection .banner {
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .bannerInfo .bannerTitle {
+    font-size: 5rem;
+    line-height: 1.2;
+    font-family: var(--Playfair);
+}
+
+.bannerInfo .bannerTitle span {
+    color: var(--extraDark);
+    font-family: var(--Playfair);
+}
+
+.bannerInfo .bannerText {
+    font-weight: 300;
+    font-size: 1.2rem;
+    word-spacing: 2px;
+    padding: 1rem 0rem 2rem;
+    font-family: var(--Roboto);
+    text-transform: capitalize;
+}
+
+/* SignIn modal styles */
+.banner .openModal {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    margin: 2rem 1rem 0rem;
+    background: var(--dark);
+    transition: all 0.3s ease;
+    font-family: var(--Roboto);
+}
+
+.openModal:hover {
+    color: #cbcbcb;
+    transform: translateY(-25%);
+}
+
+.openModal:focus {
+    box-shadow: 0px 0px 10px 3px var(--shadow);
+}
+
+.signInModal {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    display: none;
+    position: fixed;
+    transition: none;
+    align-items: center;
+    transform: scale(1.1);
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.signInModal .signInModalContent {
+    width: 375px;
+    border-radius: 10px;
+    transition: opacity 4s ease;
+    background-color: rgba(150, 150, 150, 0.8);
+}
+
+.signInModalContent .signInModalContentTitle {
+    display: flex;
+    padding: 2rem 1.5rem;
+    justify-content: center;
+    background: var(--extraDark);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.signInModalContentTitle h4 {
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: var(--Playfair);
+}
+
+.signInModalContent .signInModalContentInput {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: #cbcbcb;
+}
+
+.signInModalContentInput form .contentInputItem {
+    display: flex;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contentInputItem label {
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+    font-family: var(--Quicksand);
+}
+
+.contentInputItem label[for="password"] {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentInputItem label[for="password"] a {
+    color: #036dde;
+    text-decoration: none;
+}
+
+.contentInputItem input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #979797;
+}
+
+.contentInputItem input:focus {
+    border-color: #464646;
+}
+
+.signInModalContentInput .signIn {
+    width: 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: #1F883D;
+    font-family: var(--Roboto);
+}
+
+.signInModalContentInput .signIn:hover {
+    background: #1e7437;
+}
+
+.signInModalContentInput .signIn:disabled {
+    color: #fff;
+    cursor: not-allowed;
+    background: #65a878;
+}
+
+.closeSignInModal {
+    width: 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background: var(--dark);
+    font-family: var(--Roboto);
+}
+
+.closeSignInModal:hover {
+    background: var(--extraDark);
+}
+
+/* Sidebar menu styles */
+#toggleSidebar {
+    top: 50%;
+    opacity: 0;
+    border: none;
+    z-index: 100;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    transform: translateX(50%);
+    transform: translateY(-50%);
+    background: var(--extraDark);
+    padding: 1rem 1rem 1rem 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#toggleSidebar.visible {
+    opacity: 1;
+}
+
+#toggleSidebar i {
+    font-size: 1.4rem;
+}
+
+.sidebar {
+    top: 0;
+    z-index: 50;
+    left: -18rem;
+    width: 18rem;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    backdrop-filter: blur(8px);
+    transition: left 0.3s ease;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar.active .sidebarContent {
+    opacity: 1;
+}
+
+.sidebarContent {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: opacity 0.6s ease;
+}
+
+.sidebarContent .sidebarLogo {
+    margin: 2rem 0rem;
+    align-self: center;
+}
+
+.sidebarContent .sidebarLogo a {
+    color: #fff;
+    font-size: 2rem;
+    position: relative;
+    padding: 0rem 1rem;
+    text-decoration: none;
+    font-family: var(--Playfair);
+}
+
+.sidebarLogo a i {
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    position: absolute;
+}
+
+.sidebarContent .sidebarNavigationMenu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebarNavigationMenu .sidebarNavbarItems {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.sidebarNavbarItems .sidebarNavbarItem {
+    margin-bottom: 1rem;
+}
+
+.sidebarNavbarItems .sidebarNavbarItem a {
+    color: #fff;
+    display: block;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 1rem 3rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.sidebarNavbarItems .sidebarNavbarItem a:hover {
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebarContent .sidebarContentFooter {
+    margin: 2rem 0rem;
+    align-self: center;
+    padding: 0rem 0.5rem;
+}
+
+.sidebarContentFooter p,
+.sidebarContentFooter a {
+    color: #979797;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--Playfair);
+}
+
+.sidebarContentFooter a:hover {
+    text-decoration: underline;
+}
+
+.backdrop {
+    inset: 0;
+    z-index: 25;
+    position: fixed;
+    pointer-events: none;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.backdrop.active {
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Scroll to top button styles */
+.scrollToTopBtnGradient {
+    background: linear-gradient(to bottom, var(--extraDark), #979797);
+    background-size: 180% 180%;
+    animation: customScrollBtn-gradient 5s ease infinite;
+}
+
+@keyframes customScrollBtn-gradient {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+#scrollToTopBtn {
+    z-index: 20;
+    width: 50px;
+    height: 50px;
+    bottom: 2rem;
+    border: none;
+    right: 2.2rem;
+    color: #fff;
+    display: none;
+    outline: none;
+    position: fixed;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    transform: scale(1.2);
+    background: linear-gradient(to bottom, var(--extraDark), #979797);
+    background-size: 180% 180%;
+    animation: customScrollBtn-gradient 5s ease infinite;
+    box-shadow: 0px 0px 3px 10px rgba(203, 203, 203, 0.463);
+}
+
+/* Footer section styles */
+.footerSectionGradient {
+    background: linear-gradient(to bottom, var(--extraDark), #979797);
+    background-size: 180% 180%;
+    animation: customHome-gradient 5s ease infinite;
+}
+
+@keyframes customHome-gradient {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.footerSection {
+    color: #fff;
+    padding: 4.5rem 0rem;
+}
+
+.footerSection .footerSectionNavigationMenu {
+    display: flex;
+    padding: 0rem 1.2rem;
+    justify-content: space-between;
+}
+
+.footerSectionNavigationMenu .footerSectionLogo {
+    margin-top: 0.5rem;
+}
+
+.footerSectionNavigationMenu .footerSectionLogo a {
+    color: #fff;
+    font-size: 2rem;
+    padding: 0rem 1rem;
+    position: relative;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    font-family: var(--Playfair);
+}
+
+.footerSectionNavigationMenu .footerSectionLogo a i {
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    position: absolute;
+}
+
+.footerSectionNavigationMenu {
+    margin-bottom: 4.5rem;
+}
+
+.footerSectionNavigationMenu .footerSectionNavbar {
+    display: grid;
+    column-gap: 5.6rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footerSectionNavbarItems {
+    list-style: none;
+}
+
+.footerSectionNavbarItem {
+    padding: 0.5rem;
+}
+
+.footerSectionNavbarItem a {
+    color: #9e9e9e;
+    font-size: 1.1rem;
+    padding: 0rem 0.5rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.footerSectionNavbarItem a:hover {
+    color: #e1e1e1;
+    text-decoration: underline;
+}
+
+.footerSection p {
+    display: flex;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    font-family: var(--Playfair);
+}
+
+.footerSection .socialNetworks {
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.footerSection .socialNetworks .socialNetwork {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    border-radius: 50%;
+    align-items: center;
+    margin: 0rem 0.5rem;
+    text-decoration: none;
+    justify-content: center;
+    border: 2px solid #fff;
+    transition: all 1s ease;
+}
+
+.socialNetworks .socialNetwork:hover {
+    color: var(--dark);
+    background: #fff;
+    transform: rotate(360deg);
+}
+
+.footerSection .footerText {
+    display: flex;
+    justify-content: center;
+}
+
+.footerText p {
+    display: flex;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    justify-content: center;
+    font-family: var(--Playfair);
+}
+
+.footerSection p .art {
+    font-size: 1.2rem;
+    padding: 0rem 15px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-right: none;
+    transition: all 0.3s ease;
+    font-family: var(--Playfair);
+}
+
+.footerSection p .design {
+    margin-right: 2px;
+    padding: 0px 2px;
+    font-size: 1.2rem;
+    background: #fff;
+    color: var(--dark);
+    letter-spacing: 2px;
+    align-self: stretch;
+    transition: all 0.3s ease;
+    font-family: var(--Playfair);
+}
+
+.footerText p:hover .art {
+    background: #fff;
+    color: var(--dark);
+}
+
+.footerText p:hover .design {
+    color: #fff;
+    border: 1px solid #fff;
+    border-left: none;
+    background: transparent;
+}

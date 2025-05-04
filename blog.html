@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Art.Design - Blog</title>
+        <link rel="icon" type="images/png" href="./images/favicon.png">
+
+        <!-- Font links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Fontawesome icon link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <!-- Bootstrap icon link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- CSS link -->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/blog.css">
+        <link rel="stylesheet" href="./css/switch-theme.css">
+    </head>
+    <body>
+        <!-- Blog header section -->
+            <header id="blog" class="headerSection blogHeaderSection">
+
+                <!-- Blog navigation menu -->
+                <nav id="navbar" class="navbar blogHeaderSectionNavbar">
+                    <div class="container">
+                        <div class="navigationMenu blogHeaderSectionNavigationMenu">
+                            <div class="navigationMenuLogo blogHeaderSectionNavigationMenuLogo">
+                                <a href="./index.html"> Art.Design
+                                    <i class="fa-regular fa-registered"></i>
+                                </a>
+                            </div>
+                            <div class="navigationMenuNavbar blogHeaderSectionNavigationMenuNavbar">
+                                <ul class="navbarItems">
+                                    <li class="navbarItem">
+                                        <a href="./index.html">home</a>
+                                    </li>
+                                    <li class="navbarItem">
+                                        <a href="./design.html">design</a>
+                                    </li>
+                                    <li class="navbarItem">
+                                        <a href="#about">about</a>
+                                    </li>
+                                    <li class="navbarItem">
+                                        <a href="#reviews">reviews</a>
+                                    </li>
+                                    <li class="navbarItem">
+                                        <a href="./contact.html">contact</a>
+                                    </li>
+                                    <li class="navbarItem switchMode">
+                                        <span>light mode</span>
+                                        <label class="switch">
+                                            <input type="checkbox" id="toggleTheme">
+                                            <span class="slider">
+                                                <i class="bi bi-brightness-high-fill sunIcon active"></i>
+                                                <i class="bi bi-moon-stars-fill moonIcon"></i>
+                                            </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- /Blog navigation menu -->
+
+                <!-- Blog sidebar menu -->
+                    <aside id="aside" class="aside">
+                        <button id="toggleSidebar">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div id="sidebar" class="sidebar">
+                            <div class="sidebarContent">
+                                <div class="sidebarLogo">
+                                    <a href="./index.html">
+                                        Art.Design
+                                        <i class="fa-regular fa-registered"></i>
+                                    </a>
+                                </div>
+                                <div class="sidebarNavigationMenu">
+                                    <ul class="sidebarNavbarItems">
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./index.html">home</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./design.html">design</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#design">about</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#design">reviews</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./contact.html">contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebarContentFooter">
+                                    <p>
+                                        © 2025 <a href="./index.html">Art.Design</a>. All content is protected by copyright and may not be reproduced without permission.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="backdrop" class="backdrop"></div>
+                    </aside>
+                <!-- /Blog sidebar menu -->
+
+                <!-- Blog section banner -->
+                    <div id="banner" class="banner blogBanner">
+                        <div class="container">
+                            <div class="bannerInfo blogBannerInfo">
+                                <h1 class="bannerTitle blogBannerTitle">
+                                    <span>Art.</span> Design Blogging
+                                </h1>
+                                <p class="bannerText blogBannerText">
+                                    Everything that you want to know about art & design
+                                </p>
+                            </div>
+                            <button id="openSignInModal" class="openSignInModal openModal">Sign in</button>
+                            <button id="openSignUpModal" class="openSignUpModal openModal">Sign up</button>
+                            <div id="signInModal" class="signInModal">
+                                <div class="signInModalContent">
+                                    <div class="signInModalContentTitle">
+                                        <h4>Sign in to Art.Design</h4>
+                                    </div>
+                                    <div class="signInModalContentInput">
+                                        <form action="https://echo.htmlacademy.ru" method="GET">
+                                            <div class="contentInputItem">
+                                                <label for="email">Username or email address</label>
+                                                <input type="text" name="Email" id="email" required>
+                                            </div>
+                                            <div class="contentInputItem">
+                                                <label for="password">
+                                                    <span>Password</span>
+                                                    <a href="#">Forgot password?</a>
+                                                </label>
+                                                <input type="password" name="Password" id="password">
+                                            </div>
+                                            <button id="signIn" class="signIn" disabled>Sign in</button>
+                                        </form>
+                                        <button id="closeSignInModal" class="closeSignInModal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="scrollToTopBtn" class="scrollToTopBtnGradient" title="Go to top">
+                                <i class="fa-solid fa-up-long"></i>
+                            </button>
+                        </div>
+                    </div>
+                <!-- /Blog section banner -->
+
+            </header>
+        <!-- /Blog header section -->
+
+        <!-- Blog page section -->
+            <section class="blogPageSection">
+                <div class="container">
+                    <div class="sectionInfo">
+                        <h2 class="sectionTitle">
+                            The latest blogs
+                        </h2>
+                        <p class="sectionSubtitle">
+                            We are happy to have helpful information through our blogs
+                        </p>
+                    </div>
+                    <div class="blogPageSectionContent">
+                        <div class="blogPageSectionContentItems">
+                            <div class="blogPageSectionContentItem">
+                                <div class="blogPageSectionContentImages">
+                                    <div class="blogContentImages">
+                                        <div class="blogContentImage blogImageOne">
+                                            <a href="#">
+                                                <img data-id="1" class="image" src="./images/blog-p-1.jpg" alt="Blog content image">
+                                            </a>
+                                            <span>1</span>
+                                        </div>
+                                        <div class="blogContentImage blogImageTwo">
+                                            <a href="#">
+                                                <img data-id="2" class="image" src="./images/blog-p-2.jpg" alt="Blog content image">
+                                            </a>
+                                            <span>2</span>
+                                        </div>
+                                        <div class="blogContentImage blogImageThree">
+                                            <a href="#">
+                                                <img data-id="3" class="image" src="./images/blog-p-3.jpg" alt="Blog content image">
+                                            </a>
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                    <div class="blogContentImages">
+                                        <div class="blogContentImage blogImageFour">
+                                            <a href="#">
+                                                <img data-id="4" class="image" src="./images/blog-p-4.jpg" alt="Blog content image">
+                                            </a>
+                                            <span>4</span>
+                                        </div>
+                                        <div class="blogContentImage blogImageFive">
+                                            <a href="#">
+                                                <img data-id="5" class="image" src="./images/blog-p-5.jpg" alt="Blog content image">
+                                            </a>
+                                            <span>5</span>
+                                        </div>
+                                        <div class="blogContentImage blogImageSix">
+                                            <a href="#">
+                                                <img data-id="6" class="image" src="./images/blog-p-6.jpg" alt="Blog content image">
+                                            </a>
+                                            <span>6</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blogPageSectionContentInfos">
+                                    <div class="blogContentInfoOne blogContentInfo">
+                                        <div class="infoSource">
+                                            <span>1</span>
+                                            <div class="infoDate">
+                                                <span>16.04.2025</span>
+                                                <i class="bi bi-person"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="infoTitle">blog title</h4>
+                                        <p class="infoText" data-id="1">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quos at dolorem quae veritatis facere quas similique modi aliquid magni eaque quisquam fugit quo, fugiat, atque suscipit quia a eligendi. Dolore nobis, nemo vel debitis nam eos, totam similique itaque deserunt aspernatur quidem qui aut aliquid obcaecati aperiam adipisci corrupti excepturi animi ipsum fuga ipsam voluptas? Exercitationem ipsa, laborum veniam veritatis ipsam, saepe eligendi illo reiciendis in obcaecati provident consequatur.
+                                            <a href="#">Learn more...</a>
+                                        </p>
+                                    </div>
+                                    <div class="blogContentInfoTwo blogContentInfo">
+                                        <div class="infoSource">
+                                            <span>2</span>
+                                            <div class="infoDate">
+                                                <span>16.04.2025</span>
+                                                <i class="bi bi-person"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="infoTitle">blog title</h4>
+                                        <p class="infoText" data-id="2">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quos at dolorem quae veritatis facere quas similique modi aliquid magni eaque quisquam fugit quo, fugiat, atque suscipit quia a eligendi. Dolore nobis, nemo vel debitis nam eos, totam similique itaque deserunt aspernatur quidem qui aut aliquid obcaecati aperiam adipisci corrupti excepturi animi ipsum fuga ipsam voluptas? Exercitationem ipsa, laborum veniam veritatis ipsam, saepe eligendi illo reiciendis in obcaecati provident consequatur.
+                                            <a href="#">Learn more...</a>
+                                        </p>
+                                    </div>
+                                    <div class="blogContentInfoThree blogContentInfo">
+                                        <div class="infoSource">
+                                            <span>3</span>
+                                            <div class="infoDate">
+                                                <span>16.04.2025</span>
+                                                <i class="bi bi-person"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="infoTitle">blog title</h4>
+                                        <p class="infoText" data-id="3">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quos at dolorem quae veritatis facere quas similique modi aliquid magni eaque quisquam fugit quo, fugiat, atque suscipit quia a eligendi. Dolore nobis, nemo vel debitis nam eos, totam similique itaque deserunt aspernatur quidem qui aut aliquid obcaecati aperiam adipisci corrupti excepturi animi ipsum fuga ipsam voluptas? Exercitationem ipsa, laborum veniam veritatis ipsam, saepe eligendi illo reiciendis in obcaecati provident consequatur.
+                                            <a href="#">Learn more...</a>
+                                        </p>
+                                    </div>
+                                    <div class="blogContentInfoFour blogContentInfo">
+                                        <div class="infoSource">
+                                            <span>4</span>
+                                            <div class="infoDate">
+                                                <span>16.04.2025</span>
+                                                <i class="bi bi-person"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="infoTitle">blog title</h4>
+                                        <p class="infoText" data-id="4">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quos at dolorem quae veritatis facere quas similique modi aliquid magni eaque quisquam fugit quo, fugiat, atque suscipit quia a eligendi. Dolore nobis, nemo vel debitis nam eos, totam similique itaque deserunt aspernatur quidem qui aut aliquid obcaecati aperiam adipisci corrupti excepturi animi ipsum fuga ipsam voluptas? Exercitationem ipsa, laborum veniam veritatis ipsam, saepe eligendi illo reiciendis in obcaecati provident consequatur.
+                                            <a href="#">Learn more...</a>
+                                        </p>
+                                    </div>
+                                    <div class="blogContentInfoFive blogContentInfo">
+                                        <div class="infoSource">
+                                            <span>5</span>
+                                            <div class="infoDate">
+                                                <span>16.04.2025</span>
+                                                <i class="bi bi-person"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="infoTitle">blog title</h4>
+                                        <p class="infoText" data-id="5">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quos at dolorem quae veritatis facere quas similique modi aliquid magni eaque quisquam fugit quo, fugiat, atque suscipit quia a eligendi. Dolore nobis, nemo vel debitis nam eos, totam similique itaque deserunt aspernatur quidem qui aut aliquid obcaecati aperiam adipisci corrupti excepturi animi ipsum fuga ipsam voluptas? Exercitationem ipsa, laborum veniam veritatis ipsam, saepe eligendi illo reiciendis in obcaecati provident consequatur.
+                                            <a href="#">Learn more...</a>
+                                        </p>
+                                    </div>
+                                    <div class="blogContentInfoSix blogContentInfo">
+                                        <div class="infoSource">
+                                            <span>6</span>
+                                            <div class="infoDate">
+                                                <span>16.04.2025</span>
+                                                <i class="bi bi-person"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="infoTitle">blog title</h4>
+                                        <p class="infoText" data-id="6">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quos at dolorem quae veritatis facere quas similique modi aliquid magni eaque quisquam fugit quo, fugiat, atque suscipit quia a eligendi. Dolore nobis, nemo vel debitis nam eos, totam similique itaque deserunt aspernatur quidem qui aut aliquid obcaecati aperiam adipisci corrupti excepturi animi ipsum fuga ipsam voluptas? Exercitationem ipsa, laborum veniam veritatis ipsam, saepe eligendi illo reiciendis in obcaecati provident consequatur.
+                                            <a href="#">Learn more...</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blogPageSectionPagination">
+                            <a class="dbLeftChevron" href="#">
+                                <i class="bi bi-chevron-double-left"></i>
+                            </a>
+                            <a class="leftChevron" href="#">
+                                <i class="bi bi-chevron-left"></i>
+                            </a>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">...</a>
+                            <a class="dbRightChevron" href="#">
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                            <a class="rightChevron" href="#">
+                                <i class="bi bi-chevron-double-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- /Blog page section -->
+
+        <!-- Blog footer section -->
+            <footer class="footerSection footerSectionGradient">
+                <div class="container">
+                    <div class="footerSectionNavigationMenu">
+                        <div class="footerSectionLogo">
+                            <a href="./index.html">Art.Design
+                                <i class="fa-regular fa-registered"></i>
+                            </a>
+                        </div>
+                        <div class="footerSectionNavbar">
+                            <ul class="footerSectionNavbarItems">
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./index.html">home</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./design.html">designs</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">about us</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./contact.html">contact</a>
+                                </li>
+                            </ul>
+                            <ul class="footerSectionNavbarItems">
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./index.html">home</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./design.html">designs</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">about us</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./contact.html">contact</a>
+                                </li>
+                            </ul>
+                            <ul class="footerSectionNavbarItems">
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./index.html">home</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./design.html">designs</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">about us</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./contact.html">contact</a>
+                                </li>
+                            </ul>
+                            <ul class="footerSectionNavbarItems">
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./index.html">home</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./design.html">designs</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">about us</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./contact.html">contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="">
+                        You can also follow us on these pages as well
+                    </p>
+                    <div class="socialNetworks">
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                    <div class="footerText">
+                        <p>
+                            <span class="art">Art.</span>
+                            <span class="design">Design</span>
+                            blogging page
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        <!-- /Blog footer section -->
+        
+        <!-- JS links -->
+        <script src="./js/switch-mode.js"></script>
+        <script src="./js/sidebar.js"></script>
+        <script src="./js/sign-in.js"></script>
+        <script src="./js/scroll-to-top-btn.js"></script>
+        <script src="./js/blog-hovered-images.js"></script>
+    </body>
+</html>
