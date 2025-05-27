@@ -408,7 +408,7 @@
 }
 
 /* Header section media queries */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 575px) {
     .headerSection .banner {
         padding-top: 30%;
     }
@@ -424,5 +424,98 @@
     
     .bannerForm form .formBtnSearch {
         width: 35px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .headerSection .banner {
+        padding-top: 15%;
+    }
+}
+
+/* Design section media queries */
+@media only screen and (max-width: 575px) {
+    .designSection .designSectionContent .designSectionCards {
+        gap: 1.5rem;
+        display: grid;
+        margin: 1.5rem 0rem;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blogSection .blogSectionContent .blogSectionCards {
+        gap: 1.5rem;
+        display: grid;
+        margin: 1.5rem 0rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blogSectionCardInfo .blogCardTitle {
+        font-size: 1.4rem;
+    }
+
+    .aboutSection .aboutSectionContent .aboutSectionContentItems {
+        display: grid;
+        column-gap: 4rem;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .aboutSectionInfo .aboutTitle .authorName {
+        font-size: 2rem;
+    }
+
+    .aboutSectionInfo .aboutTitle .authorProf {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .aboutSectionInfo .aboutAuthor {
+        font-size: 1rem;
+    }
+
+    .reviewsSection {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .designSection .designSectionContent .designSectionCards {
+        gap: 1.5rem;
+        display: grid;
+        margin: 1.5rem 0rem;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogSection .blogSectionContent .blogSectionCards {
+        gap: 1.5rem;
+        display: grid;
+        margin: 1.5rem 0rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogSectionCardInfo .blogCardTitle {
+        font-size: 1.4rem;
+    }
+
+    .aboutSection .aboutSectionContent .aboutSectionContentItems {
+        display: grid;
+        column-gap: 4rem;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .aboutSectionInfo .aboutTitle .authorProf {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .aboutSectionInfo .aboutAuthor {
+        font-size: 1rem;
+    }
+
+    .reviewsSection {
+        display: none;
     }
 }

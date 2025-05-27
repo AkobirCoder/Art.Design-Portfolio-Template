@@ -678,7 +678,7 @@ img {
 }
 
 /* Header section media queries */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
     .navbarItems .navbarItem {
         display: none;
     }
@@ -709,6 +709,12 @@ img {
         font-size: 1rem;
         padding: 1rem 2rem;
         letter-spacing: 1px;
-        border-radius: 25px;
+    }
+}
+
+/* Footer section media queries */
+@media only screen and (max-width: 992px) {
+    .footerSection .footerSectionNavigationMenu {
+        display: none;
     }
 }

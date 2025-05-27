@@ -213,3 +213,29 @@
     transform: scale(1.1);
     box-shadow: 0px 0px 10px 5px #9c9c9c;
 }
+
+/* Header section media queries */
+@media only screen and (max-width: 575px) {
+    .headerSection .banner {
+        padding-top: 30%;
+    }
+
+    .banner .bannerForm form {
+        width: 75%;
+        padding: 0.3rem 1rem;
+    }
+
+    .bannerForm form .formInputSearch {
+        font-size: 1rem;
+    }
+    
+    .bannerForm form .formBtnSearch {
+        width: 35px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .headerSection .banner {
+        padding-top: 15%;
+    }
+}
