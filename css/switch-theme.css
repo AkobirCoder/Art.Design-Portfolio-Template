@@ -19,6 +19,7 @@ body.darkMode {
 .navbarItems .switchMode {
     display: flex;
     color: #fff;
+    margin: 0rem 1rem;
     font-size: 0.8rem;
     align-items: center;
     border-radius: 1rem;
@@ -101,4 +102,16 @@ body.darkMode {
 
 .switch input:checked + .slider::before {
     transform: translateX(26px);
+}
+
+/* Switch mode media queries */
+@media only screen and (max-width: 992px) {
+    .navbarItems .switchMode {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    .navbarItems .switchMode > span {
+        width: 5rem;
+    }
 }

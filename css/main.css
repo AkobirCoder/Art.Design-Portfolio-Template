@@ -406,3 +406,23 @@
     letter-spacing: 0.1rem;
     font-family: var(--Playfair);
 }
+
+/* Header section media queries */
+@media only screen and (max-width: 992px) {
+    .headerSection .banner {
+        padding-top: 30%;
+    }
+
+    .banner .bannerForm form {
+        width: 75%;
+        padding: 0.3rem 1rem;
+    }
+
+    .bannerForm form .formInputSearch {
+        font-size: 1rem;
+    }
+    
+    .bannerForm form .formBtnSearch {
+        width: 35px;
+    }
+}

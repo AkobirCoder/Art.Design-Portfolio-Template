@@ -22,6 +22,15 @@ html {
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+  
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 body {
     line-height: 1.4;
     color: var(--dark);
@@ -666,4 +675,40 @@ img {
     border: 1px solid #fff;
     border-left: none;
     background: transparent;
+}
+
+/* Header section media queries */
+@media only screen and (max-width: 992px) {
+    .navbarItems .navbarItem {
+        display: none;
+    }
+
+    .navigationMenu .navigationMenuLogo a {
+        font-size: 1.5rem;
+        position: relative;
+        padding: 0rem 1rem;
+        margin: 0rem 0.2rem;
+    }
+    
+    .navigationMenu .navigationMenuLogo a i {
+        top: 6px;
+        right: 6px;
+        font-size: 0.6rem;
+        position: absolute;
+    } 
+
+    .banner .bannerInfo .bannerTitle {
+        font-size: 3rem;
+    }
+
+    .banner .bannerInfo .bannerText {
+        font-size: 1rem;
+    }
+
+    .banner .openModal {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        letter-spacing: 1px;
+        border-radius: 25px;
+    }
 }

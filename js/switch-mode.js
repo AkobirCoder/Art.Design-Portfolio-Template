@@ -105,6 +105,8 @@ blogSectionCards.forEach(blogSectionCard => {
     blogSectionCard.addEventListener("mouseenter", () => {
         if (isToggleTurnOn) {
             blogSectionCard.style.boxShadow = "0px 0px 20px 5px var(--extraDark)";
+        } else {
+            blogSectionCard.style.boxShadow = "0px 0px 20px 5px #d3d3d3";
         }
     });
 
