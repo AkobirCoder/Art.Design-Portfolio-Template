@@ -681,6 +681,7 @@ img {
 @media only screen and (max-width: 768px) {
     .sectionInfo .sectionTitle {
         font-size: 2rem;
+        text-align: center;
     }
 
     .navbarItems .navbarItem {
