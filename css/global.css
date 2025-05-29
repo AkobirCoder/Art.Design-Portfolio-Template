@@ -679,13 +679,13 @@ img {
 
 /* Header section media queries */
 @media only screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
-
     .sectionInfo .sectionTitle {
         font-size: 2rem;
         text-align: center;
+    }
+
+    #toggleSidebar {
+        display: block;
     }
 
     .navbarItems .navbarItem {
