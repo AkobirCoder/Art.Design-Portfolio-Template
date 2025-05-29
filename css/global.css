@@ -693,6 +693,7 @@ img {
     }
 
     .navigationMenu .navigationMenuLogo a {
+        padding: 0rem;
         font-size: 1.2rem;
         position: relative;
         margin: 0rem 0.2rem;
@@ -700,7 +701,7 @@ img {
     
     .navigationMenu .navigationMenuLogo a i {
         top: 6px;
-        right: 6px;
+        right: -12px;
         font-size: 0.6rem;
         position: absolute;
     } 
