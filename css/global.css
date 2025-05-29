@@ -693,6 +693,10 @@ img {
         text-align: center;
     }
 
+    .navbar {
+        padding: 0rem;
+    }
+
     #toggleSidebar {
         display: block;
     }
