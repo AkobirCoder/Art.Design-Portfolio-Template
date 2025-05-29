@@ -683,7 +683,7 @@ img {
 }
 
 /* Header section media queries */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1120px) {
     .sectionInfo .sectionTitle {
         font-size: 2rem;
         text-align: center;
