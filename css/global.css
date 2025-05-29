@@ -211,7 +211,7 @@ img {
 }
 
 .signInModal .signInModalContent {
-    width: 375px;
+    width: 23.5rem;
     border-radius: 10px;
     transition: opacity 4s ease;
     background-color: rgba(150, 150, 150, 0.8);
@@ -277,7 +277,12 @@ img {
     border-color: #464646;
 }
 
-.signInModalContentInput .signIn {
+.signInModalContentInput .signInButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.signInModalContentInput .signInButtons .signIn {
     width: 100%;
     border: none;
     color: #fff;
@@ -291,17 +296,17 @@ img {
     font-family: var(--Roboto);
 }
 
-.signInModalContentInput .signIn:hover {
+.signInModalContentInput .signInButtons .signIn:hover {
     background: #1e7437;
 }
 
-.signInModalContentInput .signIn:disabled {
+.signInModalContentInput .signInButtons .signIn:disabled {
     color: #fff;
     cursor: not-allowed;
     background: #65a878;
 }
 
-.closeSignInModal {
+.signInButtons .closeSignInModal {
     width: 100%;
     border: none;
     color: #fff;
@@ -313,7 +318,7 @@ img {
     font-family: var(--Roboto);
 }
 
-.closeSignInModal:hover {
+.signInButtons .closeSignInModal:hover {
     background: var(--extraDark);
 }
 
@@ -684,6 +689,10 @@ img {
         text-align: center;
     }
 
+    .sectionInfo .sectionSubtitle {
+        text-align: center;
+    }
+
     #toggleSidebar {
         display: block;
     }
@@ -693,7 +702,6 @@ img {
     }
 
     .navigationMenu .navigationMenuLogo a {
-        padding: 0rem;
         font-size: 1.2rem;
         position: relative;
         margin: 0rem 0.2rem;
@@ -701,7 +709,7 @@ img {
     
     .navigationMenu .navigationMenuLogo a i {
         top: 6px;
-        right: -12px;
+        right: 6px;
         font-size: 0.6rem;
         position: absolute;
     } 
@@ -718,6 +726,34 @@ img {
         font-size: 1rem;
         padding: 1rem 2rem;
         letter-spacing: 1px;
+    }
+
+    .signInModal .signInModalContent {
+        width: 20rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .signInModal .signInModalContent {
+        width: 30rem;
+        height: 23rem;
+    }
+
+    .signInModalContent .signInModalContentTitle {
+        padding: 1rem 1.5rem;
+    }
+    
+    .signInModalContentTitle h4 {
+        font-size: 1.5rem;
+    }
+
+    .signInModalContentInput .signInButtons {
+        flex-direction: row;
+    }
+
+    .signInModalContentInput .signInButtons .signIn {
+        margin-bottom: 0rem;
+        margin-right: 1.5rem;
     }
 }
 

@@ -429,7 +429,7 @@
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
     .headerSection .banner {
-        padding-top: 15%;
+        padding-top: 0%;
     }
 }
 
@@ -539,6 +539,11 @@
     .reviewsSectionContentItems .reviewContentImage {
         width: 100%;
         margin-right: 0;
+    }
+
+    .reviewContentImage .reviewImageTitle {
+        font-size: 2rem;
+        text-align: center;
     }
 
     .reviewsSectionContentItems .reviewContentInfo {
