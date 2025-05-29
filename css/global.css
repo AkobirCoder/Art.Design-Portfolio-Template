@@ -22,14 +22,14 @@ html {
     scroll-behavior: smooth;
 }
 
-/* html::-webkit-scrollbar {
+html::-webkit-scrollbar {
     display: none;
 }
   
 html {
     -ms-overflow-style: none;
     scrollbar-width: none;
-} */
+}
 
 body {
     line-height: 1.4;
