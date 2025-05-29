@@ -437,15 +437,26 @@
 @media only screen and (max-width: 575px) {
     .designSection .designSectionContent .designSectionCards {
         gap: 1.5rem;
-        display: grid;
         margin: 1.5rem 0rem;
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(1, 1fr);
     }
+}
 
-    .blogSection .blogSectionContent .blogSectionCards {
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .designSection .designSectionContent .designSectionCards {
         gap: 1.5rem;
         display: grid;
+        margin: 1.5rem 0rem;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Blog section media queries */
+@media only screen and (max-width: 575px) {
+    .blogSection .blogSectionContent .blogSectionCards {
+        gap: 1.5rem;
         margin: 1.5rem 0rem;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -453,10 +464,23 @@
     .blogSectionCardInfo .blogCardTitle {
         font-size: 1.4rem;
     }
+}
 
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .blogSection .blogSectionContent .blogSectionCards {
+        gap: 1.5rem;
+        margin: 1.5rem 0rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogSectionCardInfo .blogCardTitle {
+        font-size: 1.4rem;
+    }
+}
+
+/* About section media queries */
+@media only screen and (max-width: 575px) {
     .aboutSection .aboutSectionContent .aboutSectionContentItems {
-        display: grid;
-        column-gap: 4rem;
         align-items: center;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -473,34 +497,10 @@
     .aboutSectionInfo .aboutAuthor {
         font-size: 1rem;
     }
-
-    .reviewsSection {
-        display: none;
-    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
-    .designSection .designSectionContent .designSectionCards {
-        gap: 1.5rem;
-        display: grid;
-        margin: 1.5rem 0rem;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .blogSection .blogSectionContent .blogSectionCards {
-        gap: 1.5rem;
-        display: grid;
-        margin: 1.5rem 0rem;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .blogSectionCardInfo .blogCardTitle {
-        font-size: 1.4rem;
-    }
-
     .aboutSection .aboutSectionContent .aboutSectionContentItems {
-        display: grid;
         column-gap: 4rem;
         align-items: center;
         grid-template-columns: repeat(1, 1fr);
@@ -526,10 +526,6 @@
     .reviewsSection .reviewsTrack {
         flex-direction: column;
     } 
-
-    .reviewsSection .reviewsSectionContent {
-        overflow: visible;
-    }
 
     .reviewsSectionContent .reviewsSectionContentItems {
         align-items: center;

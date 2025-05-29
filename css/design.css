@@ -216,26 +216,37 @@
 
 /* Header section media queries */
 @media only screen and (max-width: 575px) {
-    .headerSection .banner {
+    .designHeaderSection .designBanner {
         padding-top: 30%;
     }
 
-    .banner .bannerForm form {
-        width: 75%;
+    .designBanner .designBannerForm form {
+        /* width: 75%; */
         padding: 0.3rem 1rem;
     }
 
-    .bannerForm form .formInputSearch {
+    .designBannerForm form .formInputSearch {
         font-size: 1rem;
     }
     
-    .bannerForm form .formBtnSearch {
+    .designBannerForm form .formBtnSearch {
         width: 35px;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
-    .headerSection .banner {
-        padding-top: 15%;
+    .designHeaderSection .designBanner {
+        padding-top: 0%;
+    }
+}
+
+/* DesignPageSection media queries */
+@media only screen and (max-width: 575px) {
+    .designPageSection .designPageSectionContent {
+        display: none;
+    }
+
+    .designPageSectionContentControls {
+        display: none;
     }
 }

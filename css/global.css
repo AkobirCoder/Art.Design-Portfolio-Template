@@ -682,8 +682,21 @@ img {
     background: transparent;
 }
 
+/* Common media queries */
+@media only screen and (max-width: 575px) {
+    .section {
+        padding: 2rem 0rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section {
+        padding: 2.5rem 0rem;
+    }
+}
+
 /* Header section media queries */
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1119px) {
     .sectionInfo .sectionTitle {
         font-size: 2rem;
         text-align: center;
@@ -762,7 +775,7 @@ img {
 }
 
 /* Footer section media queries */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
     .footerSection .footerSectionNavigationMenu {
         display: none;
     }
