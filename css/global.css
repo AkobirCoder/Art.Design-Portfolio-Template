@@ -22,14 +22,14 @@ html {
     scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
     display: none;
 }
   
 html {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
+} */
 
 body {
     line-height: 1.4;
@@ -679,6 +679,10 @@ img {
 
 /* Header section media queries */
 @media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
     .sectionInfo .sectionTitle {
         font-size: 2rem;
         text-align: center;
