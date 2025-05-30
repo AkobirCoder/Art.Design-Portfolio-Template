@@ -305,7 +305,7 @@
 
     .contactInput form textarea,
     .contactInput form input {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         padding: 0.8rem 0.8rem;
     }
 
@@ -316,9 +316,13 @@
     }
 
     .contactInputItems .contactInputItem input {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         padding: 0.8rem 0.8rem;
-    }    
+    }   
+
+    .contactSubmit .contactInputBtn {
+        font-size: 0.9rem;
+    }
 
     .contactSectionContent .contactMap {
         padding: 0rem;
@@ -357,7 +361,7 @@
 
     .contactInput form textarea,
     .contactInput form input {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         padding: 1rem 1rem;
     }
 
@@ -368,9 +372,13 @@
     }
 
     .contactInputItems .contactInputItem input {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         padding: 1rem 1rem;
     }    
+
+    .contactSubmit .contactInputBtn {
+        font-size: 0.9rem;
+    }
 
     .contactSectionContent .contactMap {
         padding: 0.5rem;
