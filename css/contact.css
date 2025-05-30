@@ -263,28 +263,122 @@
     height: 500px;
 }
 
+/* Common media queries */
+@media only screen and (max-width: 575px) {
+    .section {
+        padding: 2rem 0rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section {
+        padding: 2.5rem 0rem;
+    }
+}
+
 /* Header section media queries */
 @media only screen and (max-width: 575px) {
-    .headerSection .banner {
-        padding-top: 30%;
+    .contactHeaderSection .contactBanner {
+        padding-top: 40%;
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
 
-    .banner .bannerForm form {
-        width: 75%;
-        padding: 0.3rem 1rem;
+    .contactSection .contactSectionContent {
+        padding: 0rem;
+        margin: 2rem 0rem;
     }
 
-    .bannerForm form .formInputSearch {
-        font-size: 1rem;
+    .contactSectionContent .contactSectionContentItems {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
     }
-    
-    .bannerForm form .formBtnSearch {
-        width: 35px;
+
+    .infoItem .infoItemImg img {
+        width: 2.5rem;
+    }
+
+    .contactSectionContentItems .contactInput {
+        padding: 0rem;
+    }
+
+    .contactInput form textarea,
+    .contactInput form input {
+        font-size: 1.2rem;
+        padding: 0.8rem 0.8rem;
+    }
+
+    .contactInput form .contactInputItems {
+        gap: 1rem;
+        margin-bottom: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contactInputItems .contactInputItem input {
+        font-size: 1.2rem;
+        padding: 0.8rem 0.8rem;
+    }    
+
+    .contactSectionContent .contactMap {
+        padding: 0rem;
+        margin: 2rem 0rem;
+    }
+
+    .contactSectionContent .contactMap iframe {
+        width: 100%;
+        height: 250px;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
-    .headerSection .banner {
-        padding-top: 15%;
+    .contactHeaderSection .contactBanner {
+        padding-top: 7%;
+    }
+
+    .contactSection .contactSectionContent {
+        padding: 0rem;
+        margin: 2rem 0rem;
+    }
+
+    .contactSectionContent .contactSectionContentItems {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .infoItem .infoItemImg img {
+        width: 2.5rem;
+    }
+
+    .contactSectionContentItems .contactInput {
+        padding: 0.5rem;
+    }
+
+    .contactInput form textarea,
+    .contactInput form input {
+        font-size: 1.2rem;
+        padding: 1rem 1rem;
+    }
+
+    .contactInput form .contactInputItems {
+        gap: 1rem;
+        margin-bottom: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contactInputItems .contactInputItem input {
+        font-size: 1.2rem;
+        padding: 1rem 1rem;
+    }    
+
+    .contactSectionContent .contactMap {
+        padding: 0.5rem;
+        margin: 2rem 0rem;
+    }
+
+    .contactSectionContent .contactMap iframe {
+        width: 100%;
+        height: 300px;
     }
 }

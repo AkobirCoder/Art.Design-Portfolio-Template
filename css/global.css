@@ -789,4 +789,8 @@ img {
         height: 35px;
         font-size: 15px;
     }
+
+    .footerText p {
+        margin: 0rem;
+    }
 }
