@@ -410,7 +410,7 @@
 /* Header section media queries */
 @media only screen and (max-width: 575px) {
     .headerSection .banner {
-        padding-top: 30%;
+        padding-top: 40%;
     }
 
     .banner .bannerForm form {

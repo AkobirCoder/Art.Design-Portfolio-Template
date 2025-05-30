@@ -187,28 +187,103 @@
     cursor: not-allowed;
 }
 
+/* Common media queries */
+@media only screen and (max-width: 575px) {
+    .section {
+        padding: 2rem 0rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section {
+        padding: 2.5rem 0rem;
+    }
+}
+
 /* Header section media queries */
 @media only screen and (max-width: 575px) {
     .headerSection .banner {
-        padding-top: 30%;
-    }
-
-    .banner .bannerForm form {
-        width: 75%;
-        padding: 0.3rem 1rem;
-    }
-
-    .bannerForm form .formInputSearch {
-        font-size: 1rem;
-    }
-    
-    .bannerForm form .formBtnSearch {
-        width: 35px;
+        padding-top: 35%;
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
     .headerSection .banner {
-        padding-top: 15%;
+        padding-top: 7%;
+    }
+}
+
+/* BlogPage section media queries */
+@media only screen and (max-width: 575px) {
+    .blogPageSectionContentItem .blogPageSectionContentInfos {
+        display: none;
+    }
+
+    .blogPageSectionContent .blogPageSectionContentItems {
+        padding: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .blogPageSectionContentItems .blogPageSectionContentItem {
+        grid-template-columns: 1fr;
+    }
+
+    .blogPageSectionContentItem .blogPageSectionContentImages {
+        gap: 1.2rem;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .blogPageSectionContentImages .blogContentImages {
+        gap: 1.2rem;
+        height: 350px;
+    }
+
+    .blogPageSectionPagination {
+        display: flex;
+    }    
+
+    .blogPageSectionPagination a {
+        width: 2rem;
+        height: 2rem;
+        margin: 0rem 0.3rem;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1399px) {
+    .blogPageSectionContentItem .blogPageSectionContentInfos {
+        display: block;
+    }
+
+    .blogPageSectionContent .blogPageSectionContentItems {
+        padding: 0rem 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .blogPageSectionContentItems .blogPageSectionContentItem {
+        grid-template-columns: 1fr;
+    }
+
+    .blogPageSectionContentItem .blogPageSectionContentImages {
+        gap: 1.2rem;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .blogPageSectionContentImages .blogContentImages {
+        gap: 1.2rem;
+        height: 350px;
+    }
+
+    .blogPageSectionPagination {
+        display: flex;
+    }    
+
+    .blogPageSectionPagination a {
+        width: 2rem;
+        height: 2rem;
+        margin: 0rem 0.3rem;
     }
 }

@@ -283,7 +283,16 @@
         padding-left: 0rem;
         padding-right: 0rem;
     }
+}
 
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .contactHeaderSection .contactBanner {
+        padding-top: 7%;
+    }
+}
+
+/* Contact section media queries */
+@media only screen and (max-width: 575px) {
     .contactSection .contactSectionContent {
         padding: 0rem;
         margin: 2rem 0rem;
@@ -336,10 +345,6 @@
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
-    .contactHeaderSection .contactBanner {
-        padding-top: 7%;
-    }
-
     .contactSection .contactSectionContent {
         padding: 0rem;
         margin: 2rem 0rem;
