@@ -68,7 +68,7 @@ img {
 
 /* Header section styles */
 .headerSection {
-    height: 100vh;
+    height: 50vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                 url("../images/banner-bg.jpg")
                 center/cover
